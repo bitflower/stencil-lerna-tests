@@ -11,9 +11,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react",
-    "jsxFactory": "h"
+    "jsxFactory": "h",
+    "typeRoots": ["node_modules/@types"]
   },
   "include": ["src", "types/jsx.d.ts"],
-  "exclude": ["node_modules", "src/**/*.spec.ts*", "src/**/*.e2e.ts*"],
+  "exclude": ["node_modules"],
   "references": [{ "path": "../pkg1" }, { "path": "../pkg2" }]
 }
