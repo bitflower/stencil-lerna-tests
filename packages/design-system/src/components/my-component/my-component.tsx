@@ -1,8 +1,8 @@
-import { Component, Prop, h, Method } from '@stencil/core';
-import { format } from '../../utils/utils';
-
 import * as p1 from '@ryancavanaugh/pkg1';
 import * as p2 from '@ryancavanaugh/pkg2';
+import { Component, Prop, h, Method, State } from '@stencil/core';
+
+import { format } from '../../utils/utils';
 
 @Component({
   tag: 'my-component',
@@ -25,9 +25,13 @@ export class MyComponent {
    */
   @Prop() last: string = '';
 
+  @State()
+  someMsg: string;
+
   @Method()
   public async callMe(smth: string): Promise<void> {
-    console.log(smth);
+    this.someMsg = smth;
+    // console.log(smth);
   }
 
   private getText(): string {
@@ -35,14 +39,12 @@ export class MyComponent {
   }
 
   render() {
-    console.log('BLUB', p1.fn());
-
     return (
       <div>
         <p>Hello! I'm {this.getText()}</p>
         <p>{p1.fn()}</p>
         <p>{p2.fn()}</p>
-        {/* <p>{p2.connectServer()}</p> */}
+        <p>{this.someMsg}</p>
       </div>
     );
   }
