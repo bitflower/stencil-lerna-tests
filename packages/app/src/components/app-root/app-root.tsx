@@ -1,8 +1,8 @@
 import { Component, Element, h, State } from '@stencil/core';
-import * as p2 from '@ryancavanaugh/pkg2';
+import { fn, getLogger } from '@ryancavanaugh/pkg2';
 import { app } from '@ryancavanaugh/pkg3';
 
-const d = p2.getLogger('app-root.tsx');
+const d = getLogger('app-root.tsx');
 
 @Component({
   tag: 'app-root',
@@ -56,7 +56,7 @@ export class AppRoot {
           <my-component first='Matthias' last='Max' />
 
           <h2>Here's PKG2 consumed directly from "app"</h2>
-          <p>{p2.fn()}</p>
+          <p>{fn()}</p>
           {/* <p>{p2.connectServer()}</p> */}
 
           <p>Number of records in the service: {this.numberOfRecords}</p>
