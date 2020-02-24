@@ -13,20 +13,23 @@ describe('my-component', () => {
     const page = await newE2EPage();
 
     await page.setContent('<my-component></my-component>');
-    const component = await page.find('my-component');
+    // const component = await page.find('my-component');
     const element = await page.find('my-component >>> div');
-    expect(element.textContent).toEqual(`Hello, World! I'm `);
+    // expect(element.textContent).toEqual(`Hello, World! I'm `);
+    expect(element.textContent).toEqual(
+      `Hello! I'm Hello from PKG1I'm PKG2 and I've consumed PKG1's fn(): Hello from PKG1`
+    );
 
-    component.setProperty('first', 'James');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James`);
+    // component.setProperty('first', 'James');
+    // await page.waitForChanges();
+    // expect(element.textContent).toEqual(`Hello, World! I'm James`);
 
-    component.setProperty('last', 'Quincy');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Quincy`);
+    // component.setProperty('last', 'Quincy');
+    // await page.waitForChanges();
+    // expect(element.textContent).toEqual(`Hello, World! I'm James Quincy`);
 
-    component.setProperty('middle', 'Earl');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Earl Quincy`);
+    // component.setProperty('middle', 'Earl');
+    // await page.waitForChanges();
+    // expect(element.textContent).toEqual(`Hello, World! I'm James Earl Quincy`);
   });
 });
