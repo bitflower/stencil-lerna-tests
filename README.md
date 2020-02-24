@@ -1,6 +1,6 @@
 # Stencil monorepo with Lerna + Typescript Project References = failing tests
 
-Demonstrates the `Unexpected token :` error that is thrown when running even simple tests.
+Demonstrates the `Can't find module ...` error that is thrown when running `spec` tests.
 
 ## Setting up this repo
 
