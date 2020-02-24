@@ -16,15 +16,9 @@ cd ..
 cd ..
 lerna bootstrap
 cd packages/design-system
-npm run test
+npm run test.spec
 ```
 
 ## The error
 
-![https://link](https://github.com/bitflower/stencil-lerna-tests/raw/master/Bildschirmfoto%202020-02-22%20um%2002.19.39.png)
-
-The only files the string `"version": "3.7.5"` is contained are these:
-
-![[https://link](https://github.com/bitflower/stencil-lerna-tests/raw/master/Bildschirmfoto%202020-02-22%20um%2002.19.39.png](https://github.com/bitflower/stencil-lerna-tests/raw/master/Bildschirmfoto%202020-02-22%20um%2002.19.15.png)
-
-Not sure where this is coming from and I also think it's not a transpile issue of some non compatible dependencies. Not a pro though...
+![https://link](https://github.com/bitflower/stencil-lerna-tests/raw/master/Bildschirmfoto%202020-02-24%20um%2021.34.10.png)
