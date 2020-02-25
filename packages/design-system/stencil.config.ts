@@ -18,4 +18,14 @@ export const config: Config = {
     }
   ],
   plugins: [builtins()]
+  // testing: {
+  //   // transformIgnorePatterns: [
+  //   //   '<rootDir>.*(node_modules)(?!.*@ryancavanaugh/pkg.*).*$'
+  //   // ],
+  //   // transformIgnorePatterns: ['<rootDir>/node_modules/(?!@ryancavanaugh)']
+  //   // moduleNameMapper: {
+  //   //   '@ryancavanaugh/(.*)': '<rootDir>/../$1'
+  //   //   // '@ryancavanaugh/pkg1': '<rootDir>/../pkg1'
+  //   // },
+  // }
 };
