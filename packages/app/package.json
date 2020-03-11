@@ -8,15 +8,15 @@
   "collection": "dist/collection/collection-manifest.json",
   "types": "dist/types/components.d.ts",
   "scripts": {
-    "build": "stencil build --prod",
-    "start": "stencil build --dev --watch --serve",
+    "build": "stencil build --prod --next",
+    "start": "stencil build --dev --watch --serve --next",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
     "@ryancavanaugh/pkg2": "^3.0.2",
     "@ryancavanaugh/pkg3": "^3.0.2",
-    "@stencil/core": "^1.9.0-19",
+    "@stencil/core": "^1.9.1",
     "@stencil/router": "^1.0.1",
     "design-system": "0.0.1"
   },
