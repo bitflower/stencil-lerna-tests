@@ -21,7 +21,8 @@
     "test": "npm run test.spec && npm run test.e2e",
     "test.spec": "stencil test --spec",
     "test.e2e": "stencil test --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "jest": "jest"
   },
   "dependencies": {
     "@ryancavanaugh/pkg1": "^3.0.2",
