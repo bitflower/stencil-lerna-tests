@@ -11,11 +11,6 @@ npm install
 lerna bootstrap
 npm run build
 cd packages/design-system
-npm run test
-cd ..
-cd ..
-lerna bootstrap
-cd packages/design-system
 npm run jest
 ```
 
