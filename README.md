@@ -16,7 +16,7 @@ cd ..
 cd ..
 lerna bootstrap
 cd packages/design-system
-npm run test.spec
+npm run jest
 ```
 
 ## The error
