@@ -1,23 +1,33 @@
 import { Config } from '@stencil/core';
 // import nodePolyfills from 'rollup-plugin-node-polyfills';
 import builtins from 'rollup-plugin-node-builtins';
+import replace from '@rollup/plugin-replace';
 
 export const config: Config = {
   namespace: 'design-system',
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../loader'
+      esmLoaderPath: '../loader',
     },
     {
-      type: 'docs-readme'
+      type: 'docs-readme',
     },
     {
       type: 'www',
-      serviceWorker: null // disable service workers
-    }
+      serviceWorker: null, // disable service workers
+    },
   ],
-  plugins: [builtins()]
+  plugins: [builtins()],
+  rollupPlugins: {
+    before: [
+      replace({
+        preventAssignment: true,
+        delimiters: ['', ''],
+        '_interopRequireDefault(require("sift"))': "require('sift')",
+      }),
+    ],
+  },
   // testing: {
   //   // transformIgnorePatterns: [
   //   //   '<rootDir>.*(node_modules)(?!.*@ryancavanaugh/pkg.*).*$'
