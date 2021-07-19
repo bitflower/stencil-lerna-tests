@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.1",
   "description": "Stencil App Starter",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.js",
   "collection": "dist/collection/collection-manifest.json",
   "types": "dist/types/components.d.ts",
   "scripts": {
@@ -16,18 +16,19 @@
   "dependencies": {
     "@ryancavanaugh/pkg2": "^3.0.2",
     "@ryancavanaugh/pkg3": "^3.0.2",
-    "@stencil/core": "^1.9.1",
+    "@stencil/core": "^2.6.0",
     "@stencil/router": "^1.0.1",
     "design-system": "0.0.1"
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "24.0.20",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@types/jest": "^26.0.21",
     "@types/puppeteer": "1.19.0",
     "jest": "24.9.0",
     "jest-cli": "24.9.0",
     "puppeteer": "2.1.0",
     "rollup-plugin-node-builtins": "^2.1.2",
-    "typescript": "^3.8.2"
+    "typescript": "^4.3.5"
   }
 }
