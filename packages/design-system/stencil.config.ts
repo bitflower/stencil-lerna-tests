@@ -27,5 +27,11 @@ export const config: Config = {
   //   //   '@ryancavanaugh/(.*)': '<rootDir>/../$1'
   //   //   // '@ryancavanaugh/pkg1': '<rootDir>/../pkg1'
   //   // },
+  //   // resolver: '<rootDir>/jest-resolver.js',
+  //   // moduleDirectories: [
+  //   //   'node_modules',
+  //   //   // '/Users/matthias/Documents/Projekte/bitflower/Case OS/Prototype/v0.2/_Knowledge/StencilJS/stencil-lerna-tests/packages/pkg1',
+  //   //   '../pkg1'
+  //   // ]
   // }
 };
