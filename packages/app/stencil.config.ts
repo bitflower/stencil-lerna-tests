@@ -9,18 +9,23 @@ export const config: Config = {
   globalScript: 'src/global/app.ts',
   outputTargets: [
     {
-      type: 'dist'
+      type: 'dist',
     },
     {
       type: 'www',
       // comment the following line to disable service workers in production
       serviceWorker: null,
-      baseUrl: 'https://myapp.local/'
-    }
+      baseUrl: 'https://myapp.local/',
+    },
   ],
   plugins: [builtins()],
   nodeResolve: {
     browser: true,
-    preferBuiltins: true // Workaround for https://github.com/ionic-team/stencil/issues/1326
-  }
+    preferBuiltins: true, // Workaround for https://github.com/ionic-team/stencil/issues/1326
+  },
+  testing: {
+    moduleNameMapper: {
+      '@ryancavanaugh/pkg2': '<rootDir>/../pkg2/lib/index.js',
+    },
+  },
 };

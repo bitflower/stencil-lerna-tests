@@ -22,7 +22,7 @@ module.exports = (request, options) => {
     return resolve.sync(request, {
       basedir: options.basedir,
       extensions: options.extensions,
-      preserveSymlinks: true
+      preserveSymlinks: true,
     });
   } catch (e) {
     console.log('BF jest-resolver, ERROR');
