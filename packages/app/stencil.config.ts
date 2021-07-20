@@ -26,6 +26,8 @@ export const config: Config = {
   testing: {
     moduleNameMapper: {
       '@ryancavanaugh/pkg2': '<rootDir>/../pkg2/lib/index.js',
+      '@ryancavanaugh/pkg1': '<rootDir>/../pkg1/lib/index.js',
     },
+    // transformIgnorePatterns: ['@ryancavanaugh/pkg2', 'pkg2/lib/index.js'],
   },
 };

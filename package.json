@@ -1,11 +1,16 @@
 {
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run build --stream",
     "dev": "lerna run --scope='app' start --stream",
     "server": "lerna run start-ts --stream"
   },
   "devDependencies": {
-    "lerna": "^3.13.4",
+    "lerna": "^3.22.1",
     "typescript": "^4.3.5"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true
 }
