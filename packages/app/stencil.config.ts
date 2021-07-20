@@ -23,11 +23,4 @@ export const config: Config = {
     browser: true,
     preferBuiltins: true, // Workaround for https://github.com/ionic-team/stencil/issues/1326
   },
-  testing: {
-    moduleNameMapper: {
-      '@ryancavanaugh/pkg2': '<rootDir>/../pkg2/lib/index.js',
-      '@ryancavanaugh/pkg1': '<rootDir>/../pkg1/lib/index.js',
-    },
-    // transformIgnorePatterns: ['@ryancavanaugh/pkg2', 'pkg2/lib/index.js'],
-  },
 };

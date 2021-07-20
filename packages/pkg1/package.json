@@ -2,13 +2,15 @@
   "name": "@ryancavanaugh/pkg1",
   "version": "3.0.2",
   "description": "",
+  "main": "dist/index.js",
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
   "scripts": {
-    "build": "tsc -b .",
+    "build": "npm run build.cjs && tsc -b .",
+    "build.cjs": "tsc  --project tsconfig.commonjs.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build"
   },

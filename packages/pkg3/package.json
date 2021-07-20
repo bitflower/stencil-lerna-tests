@@ -2,11 +2,13 @@
   "name": "@ryancavanaugh/pkg3",
   "version": "3.0.2",
   "description": "",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "start-ts": "cross-env NODE_ENV= ts-node --files src/",
-    "build": "tsc -b .",
+    "build": "npm run build.cjs && tsc -b .",
+    "build.cjs": "tsc  --project tsconfig.commonjs.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build"
   },
